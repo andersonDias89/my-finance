@@ -1,12 +1,9 @@
-import { ButtonAddContact } from '../../Buttons/ButtonAddContact '
 import { InputTextAddCategory } from '../../Inputs/InputTextAddCategory'
+import { ModalFormAddContact } from '../../Modal/ModalFormAddContact'
 import { Category } from './Category'
 
 
-
-
 export const FilterContacts = () => {
-   
     return (
         <div className="w-1/3 h-96 bg-box rounded-md p-5 flex flex-col">
             <header className="w-full h-12">
@@ -45,8 +42,7 @@ export const FilterContacts = () => {
                         <span className="mb-1 text-gray-500 text-xs ml-1">Adicionar categoria</span>
                         <InputTextAddCategory />
                     </div>
-
-                   <ButtonAddContact/>
+                    <ModalFormAddContact />
                 </form>
             </div>
         </div>

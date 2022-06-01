@@ -4,7 +4,7 @@ export const Navegation = () => {
     return (
         <ul className="text-sm flex  space-x-5 text-slate-200 h-16 items-center flex-1">
             <Link href={'/dashboard'}>
-                <li className="hover:text-slate-400 cursor-pointer">Dashboard</li>
+                <li className={`hover:text-slate-400 cursor-pointer`}>Dashboard</li>
             </Link>
 
             <Link href={'/financeiro'}>
