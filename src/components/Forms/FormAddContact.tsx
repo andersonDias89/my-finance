@@ -10,14 +10,16 @@ import { InputRg } from "../Inputs/InputRg";
 import { InputPhone } from "../Inputs/InputPhone";
 
 interface SignInFormProps {
-    nome: string;
-    email: string;
-    cellPhone: string
-    cpf: string
-    rg: string
-    endereco: string
-    cidade: string
-    estado: string
+    data: {
+        nome: string;
+        email: string;
+        cellPhone: string
+        cpf: string
+        rg: string
+        endereco: string
+        cidade: string
+        estado: string
+    }
 }
 
 const signInFormSchema = yup.object().shape({
@@ -55,7 +57,7 @@ const signInFormSchema = yup.object().shape({
         })
 });
 
-export const FormAddContacts = () => {
+export const FormAddContacts = ({data}: SignInFormProps) => {
     const { register, handleSubmit, control, formState } = useForm({
         resolver: yupResolver(signInFormSchema)
     });
